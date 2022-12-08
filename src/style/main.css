@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.Main {
+.container {
     margin-left: 300px;
     margin-top: 120px;
 }
@@ -20,11 +20,40 @@ input {
     
 }
 .s_layout {
+    border-radius: 5px;
     position: absolute;
     top: 120px;
-    left: 1630px;
+    right: 50px;
     width: 250px;
-    height: 721px;
-    box-shadow: 0px 3px 6px #00000029;
-    
+    height: 70vh;
+    box-shadow: 0px 3px 7px 1px #0000003f;
+    padding: 15px;
+}
+
+.s_layout > .menu > .title {
+    color: gray;
+    font-weight: 500;
+}
+
+.s_layout .menu {
+    margin: 15px 0;
+}
+
+.s_layout .menu > *:last-child {
+    color: #6E9EFF;
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 8px 0;
+    opacity: 0.8;
+}
+.s_layout .menu > p:last-child {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+}
+.s_layout ul {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
 }

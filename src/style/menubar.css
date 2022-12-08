@@ -1,12 +1,18 @@
+@import url(https://fonts.bunny.net/css?family=noto-sans-kr:300,400,500);
 * {
     margin: 0;
     padding: 0;
-    
+    font-family: 'Noto Sans KR', sans-serif;
+}
+a:active, a:link, a:hover, a:visited {
+    color: gray;
+    text-decoration: none;
+    text-align: left;
 }
 .Nav {
     position: absolute;
     border-radius: 10px;
-    box-shadow: 0px 3px 7px #00000029;
+    box-shadow: 0px 3px 7px 1px #0000003f;
     top: 5vh;
     left: 30px;
     width: 229px;
@@ -34,7 +40,7 @@
     text-decoration-line: none;
     text-align: center;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #eee;
