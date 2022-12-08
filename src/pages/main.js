@@ -7,6 +7,7 @@ const Main = () => {
     <div className='container'>
       <div className='f_layout'>
         <img className='Img' alt='cctv' src={cctv} />
+        {/* video 태그로 스트리밍 주소 넣어서 브로드캐스팅 할 예정, 후에 캐러셀로 만들어서 슬라이드 되게 해야함 */}
       </div>
       <div className='s_layout'>
         <div className='menu'>

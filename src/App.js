@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Nav from './components/nav'
 import Main from './pages/main'
-import Dashborad from './pages/dashborad'
+import Dashboard from './pages/dashboard'
 
 import './style/menubar.css'
 import './style/main.css'
@@ -14,7 +14,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path='/' element={<Main />} />
-        <Route path='/dashbord' element={<Dashborad />} />
+        <Route path='/dashbord' element={<Dashboard />} />
       </Routes>
     </>
   )
