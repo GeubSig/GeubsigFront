@@ -21,35 +21,35 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
-  responsive: false,
-  plugins: {
-    legend: {
-      position: 'top',
+
+
+
+const LineGraph = ({data}) => {
+
+  const options = {
+    responsive: false,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: false,
+      },
     },
-    title: {
-      display: false,
-      text: '일별 급식 인원 수',
-    },
-  },
-};
+  };
 
-const labels = ['11/19', '11/20', '11/30', '12/1', '12/2', '12/3', '12/4'];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: '일별 급식 인원 수',
-      data: [1,2,3,4,5,6,7],
-      borderColor: 'skyblue',
-      backgroundColor: 'blue',
-    }
-  ],
-};
-
-const LineGraph = () => {
-  return <Line  options={options} data={data} width='850px' height='800px' style={{display:'inline-block'}} />;
+  return (
+    <div className='graph-con'>
+    <Line  options={options} data={data} width='850px' height='800px' style={{display:'inline-block'}} />
+    <div>
+    <div className='date-picker'>
+      <button>아침</button>
+      <button>점심</button>
+      <button>저녁</button>
+    </div>
+    </div>
+    </div>
+  )
 }
 
 export default LineGraph
