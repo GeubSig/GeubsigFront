@@ -72,3 +72,18 @@ input {
   .info {
     margin-top: 70px;
   }
+
+  .mainBtn {
+    display: flex;
+    justify-content: space-around;
+  }
+  .mainBtn button {
+    color: #6E9EFF;
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background: none;
+    box-shadow: 0px 3px 7px 1px #0000003f;
+  }

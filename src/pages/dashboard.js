@@ -16,6 +16,11 @@ const Dashboard = () => {
     dinner: []
   })
 
+  const [hourData, setHourData] = useState({
+    time:[],
+    data:[]
+  })
+
   let labels = dateData.breakfastDate;
   const data = {
     labels,
@@ -80,15 +85,25 @@ const Dashboard = () => {
 
       setTimeData(data.data)
     }
+
+    const getHourData = async () => {
+      const data = await axios.get("")
+
+      setHourData(data.data)
+    }
   
     getDateData()
     getTimeData()
+    getHourData()
   }, [])
   
   return (
     <div className='container' style={{ paddingRight: '30px' }}>
-      <LineGraph title="일별 급식 인원 수" data={data} />
-      <LineGraph title="시간별 급식 인원 수" data={data2} />
+      <div>
+      <LineGraph title="일별 급식 인원 수" data={data} width="780px" height="500px" />
+      <LineGraph title="시간별 급식 인원 수" data={data2} width="780px" height="500px" />
+      </div>
+      <LineGraph title="시간별 급식 인원 수" data={data2} width="1280px" height="400px" />
     </div>
   )
 }

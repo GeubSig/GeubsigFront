@@ -26,7 +26,7 @@ ChartJS.register(
 
 
 
-const LineGraph = ({data, title}) => {
+const LineGraph = ({data, title, width, height}) => {
 
   const options = {
     responsive: false,
@@ -47,7 +47,7 @@ const LineGraph = ({data, title}) => {
   }, [data])
   return (
     <div className='graph-con'>
-    <Line  options={options} data={graphData} width='780px' height='800px' style={{display:'inline-block'}} />
+    <Line  options={options} data={graphData} width={width} height={height} style={{display:'inline-block'}} />
     <div>
     <div className='date-picker'>
       <p>{title}</p>

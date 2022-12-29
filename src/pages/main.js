@@ -95,7 +95,7 @@ const Main = () => {
             <img className='Img' alt='cctv' src={cctvArry[1]} width="1280px" />
           </div>
           
-        <div><button onClick={changeCctv}>CCTV1</button><button onClick={changeCctv}>CCTV2</button></div>
+        <div className='mainBtn'><button onClick={changeCctv}>CCTV1</button><button onClick={changeCctv}>CCTV2</button></div>
       </div>
       <div className='s_layout'>
         <div className='menu'>
