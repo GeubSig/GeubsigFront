@@ -10,6 +10,8 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 ChartJS.register(
   CategoryScale,
@@ -24,7 +26,7 @@ ChartJS.register(
 
 
 
-const LineGraph = ({data}) => {
+const LineGraph = ({data, title}) => {
 
   const options = {
     responsive: false,
@@ -38,14 +40,17 @@ const LineGraph = ({data}) => {
     },
   };
 
+  const [graphData, setGraphData] = useState(data)
+
+  useEffect(() => {
+    setGraphData(data)
+  }, [data])
   return (
     <div className='graph-con'>
-    <Line  options={options} data={data} width='850px' height='800px' style={{display:'inline-block'}} />
+    <Line  options={options} data={graphData} width='780px' height='800px' style={{display:'inline-block'}} />
     <div>
     <div className='date-picker'>
-      <button>아침</button>
-      <button>점심</button>
-      <button>저녁</button>
+      <p>{title}</p>
     </div>
     </div>
     </div>
