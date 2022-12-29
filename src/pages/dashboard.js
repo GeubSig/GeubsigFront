@@ -46,8 +46,6 @@ const Dashboard = () => {
     ],
   };
 
-  
-  
   labels = ['5분', '10분', '15분', '20분', '25분', '30분', '35분', '40분', '45분', '50분', '55분', '60분'];
   const data2 = {
     labels,
@@ -72,6 +70,23 @@ const Dashboard = () => {
       },
     ],
   };
+
+  labels = dateData.breakfastDate;
+  const data3 = {
+    labels,
+    datasets: [
+      {
+        label: '',
+        data: dateData.breakfastPeople,
+        borderColor: 'skyblue',
+        backgroundColor: 'blue',
+      }
+    ],
+  };
+
+  
+  
+  
 
   useEffect(() => {
     const getDateData = async() => {
@@ -98,12 +113,12 @@ const Dashboard = () => {
   }, [])
   
   return (
-    <div className='container' style={{ paddingRight: '30px' }}>
+    <div className='container' style={{ paddingRight: '30px', marginTop: '50px' }}>
       <div>
-      <LineGraph title="일별 급식 인원 수" data={data} width="780px" height="500px" />
-      <LineGraph title="시간별 급식 인원 수" data={data2} width="780px" height="500px" />
+      <LineGraph title="일별 급식 인원 수" data={data} width="780px" height="400px" />
+      <LineGraph title="시간별 급식 인원 수" data={data2} width="780px" height="400px" />
       </div>
-      <LineGraph title="시간별 급식 인원 수" data={data2} width="1280px" height="400px" />
+      <LineGraph title="시간별 급식 인원 수" data={data3} width="1550px" height="400px" />
     </div>
   )
 }
